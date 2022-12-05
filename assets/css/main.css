@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold", url("..fonts/Roboto-Bold.ttf") format("true-type"));
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light", url("..fonts/Roboto-Light.ttf") format("true-type"));
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium", url("..fonts/Roboto-Medium.ttf") format("true-type"));
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Regular", url("..fonts/Roboto-Regular.ttf") format("true-type"));
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black", url("..fonts/Roboto-Black.ttf") format("true-type"));
+  font-style: normal;
+  font-weight: 900;
+}
+:root {
+  --black:#000000;
+  --black-1:#1F2525;
+  --black-2:#0C0B0B;
+  --black-3:#070D0D;
+  --bg-1:#08182A;
+  --bg-rectangle:#202F3F;
+  --blue:#1F3BE5;
+  --blue-2:#223A95;
+  --blue-3:#1B9AF6;
+  --gray:#E3E3E3;
+  --white:#FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr {
+  display: flex;
+}
+
+body {
+  margin: 0;
+  flex-direction: column;
+}
+body > main {
+  min-height: calc(100vh - 400px);
+}
+
+.page1 {
+  background-color: var(--bg-1);
+  background-image: url("../images/Group.png");
+  background-repeat: repeat;
+}
+.page1 a {
+  width: 100%;
+}
+.page1 header {
+  justify-content: center;
+  height: 350px;
+  width: 100vw;
+}
+.page1 header figure {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 201px;
+  margin: 40px 0 0 0;
+}
+.page1 header figure :first-child {
+  width: 100px;
+}
+.page1 header figure :last-child {
+  width: 215px;
+}
+.page1 .rectangle {
+  width: 100vw;
+  top: 350px;
+  height: 80px;
+  background-color: var(--bg-rectangle);
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
