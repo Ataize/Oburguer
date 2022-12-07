@@ -101,19 +101,17 @@ body > main {
   background-color: var(--black-3);
 }
 .app #header {
-  position: relative;
   flex-direction: column;
   width: 100vw;
+  height: 350px;
   background-image: url("../images/image 2.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .app #header #img-user {
-  position: absolute;
   width: 50px;
   height: 50px;
-  left: 270px;
-  top: 10px;
+  align-self: self-end;
 }
 .app #header #logo {
   display: flex;
@@ -139,6 +137,7 @@ body > main {
 }
 .app main {
   flex-direction: column;
+  justify-content: start;
 }
 .app main .rectangle {
   width: 100vw;
@@ -200,52 +199,11 @@ body > main {
   width: 100%;
   margin: 0;
 }
-.app .fixed {
-  position: fixed;
-  top: 832px;
-  width: 100vw;
-  height: 65px;
-}
-.app .fixed button {
-  background-color: var(--white);
-  border: var(--white);
-  width: 50%;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-.app .fixed button div {
-  justify-content: flex-start;
-  flex-direction: column;
-  padding-left: 16px;
-}
-.app .fixed .total {
-  height: fit-content;
-}
-.app .fixed .total div {
-  width: 140px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: self-end;
-  background-color: var(--gray);
-  border: var(--gray);
-}
-.app .fixed .total div span {
-  flex: 1;
-  font-weight: 400;
-  font-size: 24px;
-  color: var(--black-3);
-}
-.app .fixed .total div small {
-  text-transform: uppercase;
-}
-.app .fixed .total button {
-  width: 64px;
-  height: 65px;
-  background-color: var(--blue);
-}
 
 @media (min-width: 1200px) {
+  .app #header {
+    background-image: url("../images/image 2banner.png");
+  }
   .app #header #logo figure {
     flex-direction: row;
     align-items: center;
@@ -263,17 +221,13 @@ body > main {
     justify-content: flex-start;
   }
   .app main .rectangle h1 {
-    justify-content: flex-start;
     margin-left: 50px;
   }
-  .app main .options div {
+  .app main .options {
     max-width: 70%;
   }
   .app main .options div label .content div {
     align-items: flex-start;
-  }
-  .app main .options div hr {
-    width: 70%;
   }
 }
 
