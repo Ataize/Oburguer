@@ -62,20 +62,174 @@ body > main {
   min-height: calc(100vh - 400px);
 }
 
-.page1 {
+#bg {
+  width: 100%;
   background-color: var(--bg-1);
   background-image: url("../images/Group.png");
   background-repeat: repeat;
 }
-.page1 a {
+#bg .header {
+  width: 100%;
+  height: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#bg .header a {
+  width: auto;
+  cursor: pointer;
+}
+#bg .header a .logo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+}
+#bg .header a .logo .img1 {
+  width: 100px;
+  margin: 10px;
+}
+#bg .header a .logo .img2 {
+  width: 215px;
+}
+
+#auth {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+#auth .hide {
+  display: none;
+}
+#auth section {
+  width: 100%;
+  height: 212px;
+  align-items: center;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+#auth section .overly {
+  align-items: center;
+  justify-content: center;
+}
+#auth section .overly .flap {
+  position: absolute;
+  background-color: rgba(65, 65, 65, 0.548);
+  width: 100%;
+  height: 80px;
+  top: -80px;
+  z-index: 2;
+}
+#auth section .overly .card-login {
+  right: 50%;
+  top: -80px;
+  position: absolute;
+  margin-top: 16px;
+  justify-content: center;
+  background: #1F3BE5;
+  width: 175px;
+  height: 64px;
+  border-radius: 10px 10px 0 0;
+  z-index: 3;
+}
+#auth section .overly .card-login h1 {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#auth section .overly .card-cadastro {
+  left: 50%;
+  top: -80px;
+  position: absolute;
+  margin-top: 16px;
+  justify-content: center;
+  background: #1F3BE5;
+  width: 175px;
+  height: 64px;
+  border-radius: 10px 10px 0 0;
+  z-index: 1;
+}
+#auth section .overly .card-cadastro h1 {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#auth section #login {
+  background: #1F3BE5;
+  width: 350px;
+  height: 212px;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+#auth section #login .field {
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 70px;
+  bottom: -30px;
+  left: 30px;
+}
+#auth section #login .field label {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#auth section #login .field input {
+  width: 280px;
+  height: 50px;
+  line-height: 1.5em;
+  padding: 10px;
+  padding-top: 33px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: white;
+}
+#auth section .actions div {
+  display: inline;
+}
+#auth section .actions div a {
+  position: relative;
+  left: 30px;
+  top: 30px;
+  color: white;
+  font-size: 14px;
+}
+#auth section .actions button {
+  position: relative;
+  color: white;
+  width: 110px;
+  height: 48px;
+  background: #101D1D;
+  box-shadow: 0px 10px 10px rgba(255, 118, 12, 0.1);
+  border-radius: 10px;
+  left: 80px;
+  top: 35px;
+  align-items: center;
+  justify-content: center;
+}
+
+#bg {
+  background-color: var(--bg-1);
+  background-image: url("../images/Group.png");
+  background-repeat: repeat;
+}
+#bg a {
   width: 100%;
 }
-.page1 header {
+#bg header {
   justify-content: center;
   height: 350px;
   width: 100vw;
 }
-.page1 header figure {
+#bg header figure {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -83,13 +237,13 @@ body > main {
   height: 201px;
   margin: 40px 0 0 0;
 }
-.page1 header figure :first-child {
+#bg header figure :first-child {
   width: 100px;
 }
-.page1 header figure :last-child {
+#bg header figure :last-child {
   width: 215px;
 }
-.page1 .rectangle {
+#bg .rectangle {
   width: 100vw;
   top: 350px;
   height: 80px;

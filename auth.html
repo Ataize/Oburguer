@@ -12,17 +12,57 @@
     <meta name="description" content="Conheça O Burguer Azul"/>
     <link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
 </head>
-<body class="page1">
-    <header>
+<body id="bg">
+    <header class="header"">
         <a href="index.html">
-            <figure>
-                <img src="assets/images/Group 20.png" alt="Logo O Burguer"/>
-                <img src="assets/images/Group 19.svg" alt="O Burguer"/>
+            <figure class="logo">
+                <img class="img1" src="assets/images/Group 20.png" alt="Logo O Burguer"/>
+                <img class="img2" src="assets/images/Group 19.svg" alt="O Burguer"/>
             </figure>
         </a>
     </header>
 
-    <section class="rectangle"></section>
+    <main id="auth">
+
+        <section >  <!--adicionar class="hide" para alterar login-->
+            <div class="overly">
+                <div class="flap">
+                    
+                </div>
+                <div class="card-login">
+                    <h1>Login</h1>
+                </div>
+                <div class="card-cadastro">
+                    <h1>Cadastro</h1>
+                </div>
+            </div>
+            <form id="login">
+
+                <div class="field">
+                    <input type="email" name="email" id="email-login">
+                    <label for="email-login">E-mail</label>
+                </div>
+
+                <div class="field">
+                    <input type="password" name="password" id="password">
+                    <label for="password">Senha</label>
+                </div>
+
+                <div class="actions">
+                    <div>
+                        <a href="auth.html#forget" class="link">Esqueceu a senha?</a>   
+                    </div>
+                    <button type="submit">Enviar</button>
+                </div>
+
+            </form>
+
+
+
+        </section>
+
+
+    </main>
     
  
 </body>
