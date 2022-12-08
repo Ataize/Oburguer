@@ -10,12 +10,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
-        
         a {
-            width: auto;
+            width: 100%;
             cursor: pointer;
             .logo {
+                align-items: center;
                 display: flex;
                 flex-direction: column;
                 margin-top: 0px;
@@ -34,8 +33,8 @@
 #auth {
     position: relative;
     display: flex;
-    
     width: 100%;
+    min-height: calc(100vh - 500px);
     justify-content: center;
     align-items: center;
     z-index: 0;
@@ -43,32 +42,25 @@
    .hide {
         display: none;
     }
-
+    
     section {
         width: 100%;
         height: 212px;
         align-items: center;
-        box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 0px 0px 10px 10px;
         flex-direction: column;
         position: relative;
         z-index: 1;
-        
        .overly {
             align-items: center;
             justify-content: center;
-            
-
-            
             .flap {
                 position: absolute;
-                background-color: rgba(65, 65, 65, 0.548);
+                background-color: #29384786;
                 width: 100%;
                 height: 80px;
                 top: -80px;
                 z-index: 2;
             }
-            
             .card-login {
                 right: 50%;
                 top: -80px;
@@ -79,7 +71,7 @@
                 width: 175px;
                 height: 64px;
                 border-radius: 10px 10px 0 0;
-                z-index: 3;
+                z-index: 1;
                 
                 h1 {
                     font-size: 22px;
@@ -97,7 +89,7 @@
                 width: 175px;
                 height: 64px;
                 border-radius: 10px 10px 0 0;
-                z-index: 1;
+                z-index: 2;
                 
                 h1 {
                     font-size: 22px;
@@ -108,36 +100,28 @@
         }
         #login {
             background: #1F3BE5;
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 0px 0px 10px 10px;
             width: 350px;
             height: 212px;
             z-index: 2;
             justify-content: center;
             align-items: center;
-            
-            
-            
-            
-            
-            
-            .field {
-                
+            .field { 
                 position: relative;
                 flex-direction: column;
-                
                 width:100%;
                 height: 70px;
-                bottom: -30px;
+                bottom: -35px;
                 left: 30px;
-                
-                
-                label {
-                    
+        
+                label { 
                     color:rgb(0, 0, 0);
-                    font-size: 14px;
+                    font-size: 16px;
+                    font-weight: bold;
                     position: absolute;
-                    top: 10px;
-                    left: 10px;
-                
+                    top: 15px;
+                    left: 15px;
                 }
                 input {
                     width: 280px;
@@ -148,24 +132,79 @@
                     font-size: 16px;
                     border-radius: 10px;
                     background-color: white;
-                
                 }
             }
-
-               
-        }
-        
-        
-        .actions {
-            div {
-                display: inline;
-                a {
-                    position: relative;
-                    left: 30px;
-                    top: 30px;
-                    color: white;
-                    font-size: 14px;
+            .actions {
+                div {
+                    display: inline;
+                    a {
+                        position: relative;
+                        left: 30px;
+                        top: 30px;
+                        color: white;
+                        font-size: 14px;
+                    }
                 }
+                button {
+                    position: relative;
+                    color: white;
+                    width: 110px;
+                    height: 48px;
+                    background: #101D1D;
+                    box-shadow: 0px 10px 10px rgba(255, 118, 12, 0.1);
+                    border-radius: 10px;
+                    right: 30px;
+                    top: 25px;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        #auth-email {
+            background: #1F3BE5;
+            width: 350px;
+            height: 153px;
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 0px 0px 10px 10px;
+            justify-content: center;
+            align-items: center;
+            .field { 
+                position: relative;
+                flex-direction: column;
+                width:100%;
+                height: 70px;
+                bottom: 10px;
+                left: 30px;
+                label { 
+                    color:rgb(0, 0, 0);
+                    font-size: 16px;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                }
+                input {
+                    width: 280px;
+                    height: 50px;
+                    line-height: 1.5em;
+                    padding: 10px;
+                    padding-top: 33px;
+                    font-size: 16px;
+                    border-radius: 10px;
+                    background-color: white;
+                }
+            }
+        }
+        .actions {
+            flex-direction: column;
+            width: 350px;
+            height: 200px;
+            h1 {
+                color: white;
+                font-weight: 700;
+                font-size: 14px;
+                margin: 25px;
+                margin-left: 30px;
             }
             button {
                 position: relative;
@@ -175,14 +214,95 @@
                 background: #101D1D;
                 box-shadow: 0px 10px 10px rgba(255, 118, 12, 0.1);
                 border-radius: 10px;
-                left: 80px;
-                top: 35px;
+                left: 200px;
+                top: -10px;
                 align-items: center;
                 justify-content: center;
             }
-          
+        }
+        #register {
+            background: #1F3BE5;
+            width: 350px;
+            height: 273px;
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 0px 0px 10px 10px;
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+
+            .field { 
+                position: relative;
+                flex-direction: column;
+                width:100%;
+                height: 70px;
+                bottom: -35px;
+                left: 30px;
+                label { 
+                    color:rgb(0, 0, 0);
+                    font-size: 16px;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                }
+                input {
+                    width: 280px;
+                    height: 50px;
+                    line-height: 1.5em;
+                    padding: 10px;
+                    padding-top: 33px;
+                    font-size: 16px;
+                    border-radius: 10px;
+                    background-color: white;
+                }
+            }
+            .actions {
+                div {
+                    display: inline;
+                    a {
+                        position: relative;
+                        left: 30px;
+                        top: 30px;
+                        color: white;
+                        font-size: 14px;
+                    }
+                }
+                button {
+                    position: relative;
+                    color: white;
+                    width: 110px;
+                    height: 48px;
+                    background: #101D1D;
+                    box-shadow: 0px 10px 10px rgba(255, 118, 12, 0.1);
+                    border-radius: 10px;
+                    right: 30px;
+                    top: 40px;
+                    align-items: center;
+                    justify-content: center;  
+                }
+            }
         }
     }
-   
-
+}
+@media (min-width: 1200px) {
+    #bg {
+        .header {
+            a{ 
+                .logo {
+                    align-items: center;
+                    justify-content: center; 
+                    flex-direction: row;
+                    .img1 {  
+                        width: 150px; 
+                    }
+                    .img2 { 
+                        position: relative;
+                        top: 25px;
+                        margin-left: 30px;
+                        width: 280px;
+                    }
+                }
+            }
+        }
+    }
 }
