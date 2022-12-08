@@ -95,16 +95,15 @@
                     }
                 }
             }
-            hr {
-                border-top: none;
-                border-bottom: 1px dotted var(--blue-3);
-                width: 100%;
-                margin: 0;
-            }
+                hr {
+                    border-top: none;
+                    border-bottom: 1px dotted var(--blue-3);
+                    width: 100%;
+                    margin: 0;
+                }
             }
         }
     }
-    
 }
 @media (min-width: 1200px){
     .app {
@@ -132,13 +131,11 @@
             .rectangle {
                 justify-content: flex-start;
                 h1 {
-                  
                     margin-left: 50px;
                 }
             }
-
             .options {
-                max-width: 70%;
+                max-width: 50%;
                 div {
                     label {
                         .content{

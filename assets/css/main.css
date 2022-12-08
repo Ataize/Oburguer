@@ -516,7 +516,7 @@ body > main {
     margin-left: 50px;
   }
   .app main .options {
-    max-width: 70%;
+    max-width: 50%;
   }
   .app main .options div label .content div {
     align-items: flex-start;
