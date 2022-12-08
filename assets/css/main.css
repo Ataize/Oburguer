@@ -62,6 +62,41 @@ body > main {
   min-height: calc(100vh - 400px);
 }
 
+.page1 {
+  background-color: var(--bg-1);
+  background-image: url("../images/Group.png");
+  background-repeat: repeat;
+}
+.page1 a {
+  width: 100%;
+}
+.page1 header {
+  justify-content: center;
+  height: 350px;
+  width: 100vw;
+}
+.page1 header figure {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 201px;
+  margin: 40px 0 0 0;
+}
+.page1 header figure :first-child {
+  width: 100px;
+}
+.page1 header figure :last-child {
+  width: 215px;
+}
+.page1 .rectangle {
+  width: 100vw;
+  top: 350px;
+  height: 80px;
+  background-color: var(--bg-rectangle);
+  margin: 0;
+}
+
 #bg {
   width: 100%;
   background-color: var(--bg-1);
@@ -76,10 +111,11 @@ body > main {
   align-items: center;
 }
 #bg .header a {
-  width: auto;
+  width: 100%;
   cursor: pointer;
 }
 #bg .header a .logo {
+  align-items: center;
   display: flex;
   flex-direction: column;
   margin-top: 0px;
@@ -96,6 +132,7 @@ body > main {
   position: relative;
   display: flex;
   width: 100%;
+  min-height: calc(100vh - 500px);
   justify-content: center;
   align-items: center;
   z-index: 0;
@@ -107,8 +144,6 @@ body > main {
   width: 100%;
   height: 212px;
   align-items: center;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 0px 0px 10px 10px;
   flex-direction: column;
   position: relative;
   z-index: 1;
@@ -119,7 +154,7 @@ body > main {
 }
 #auth section .overly .flap {
   position: absolute;
-  background-color: rgba(65, 65, 65, 0.548);
+  background-color: rgba(41, 56, 71, 0.5254901961);
   width: 100%;
   height: 80px;
   top: -80px;
@@ -135,7 +170,7 @@ body > main {
   width: 175px;
   height: 64px;
   border-radius: 10px 10px 0 0;
-  z-index: 3;
+  z-index: 1;
 }
 #auth section .overly .card-login h1 {
   font-size: 22px;
@@ -152,7 +187,7 @@ body > main {
   width: 175px;
   height: 64px;
   border-radius: 10px 10px 0 0;
-  z-index: 1;
+  z-index: 2;
 }
 #auth section .overly .card-cadastro h1 {
   font-size: 22px;
@@ -161,6 +196,8 @@ body > main {
 }
 #auth section #login {
   background: #1F3BE5;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
   width: 350px;
   height: 212px;
   z-index: 2;
@@ -172,15 +209,16 @@ body > main {
   flex-direction: column;
   width: 100%;
   height: 70px;
-  bottom: -30px;
+  bottom: -35px;
   left: 30px;
 }
 #auth section #login .field label {
   color: rgb(0, 0, 0);
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 15px;
 }
 #auth section #login .field input {
   width: 280px;
@@ -192,15 +230,75 @@ body > main {
   border-radius: 10px;
   background-color: white;
 }
-#auth section .actions div {
+#auth section #login .actions div {
   display: inline;
 }
-#auth section .actions div a {
+#auth section #login .actions div a {
   position: relative;
   left: 30px;
   top: 30px;
   color: white;
   font-size: 14px;
+}
+#auth section #login .actions button {
+  position: relative;
+  color: white;
+  width: 110px;
+  height: 48px;
+  background: #101D1D;
+  box-shadow: 0px 10px 10px rgba(255, 118, 12, 0.1);
+  border-radius: 10px;
+  right: 30px;
+  top: 25px;
+  align-items: center;
+  justify-content: center;
+}
+#auth section #auth-email {
+  background: #1F3BE5;
+  width: 350px;
+  height: 153px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
+  justify-content: center;
+  align-items: center;
+}
+#auth section #auth-email .field {
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 70px;
+  bottom: 10px;
+  left: 30px;
+}
+#auth section #auth-email .field label {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+#auth section #auth-email .field input {
+  width: 280px;
+  height: 50px;
+  line-height: 1.5em;
+  padding: 10px;
+  padding-top: 33px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: white;
+}
+#auth section .actions {
+  flex-direction: column;
+  width: 350px;
+  height: 200px;
+}
+#auth section .actions h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 25px;
+  margin-left: 30px;
 }
 #auth section .actions button {
   position: relative;
@@ -210,47 +308,87 @@ body > main {
   background: #101D1D;
   box-shadow: 0px 10px 10px rgba(255, 118, 12, 0.1);
   border-radius: 10px;
-  left: 80px;
-  top: 35px;
+  left: 200px;
+  top: -10px;
   align-items: center;
   justify-content: center;
 }
-
-#bg {
-  background-color: var(--bg-1);
-  background-image: url("../images/Group.png");
-  background-repeat: repeat;
-}
-#bg a {
-  width: 100%;
-}
-#bg header {
+#auth section #register {
+  background: #1F3BE5;
+  width: 350px;
+  height: 273px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
+  z-index: 2;
   justify-content: center;
-  height: 350px;
-  width: 100vw;
+  align-items: center;
 }
-#bg header figure {
+#auth section #register .field {
+  position: relative;
   flex-direction: column;
+  width: 100%;
+  height: 70px;
+  bottom: -35px;
+  left: 30px;
+}
+#auth section #register .field label {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+#auth section #register .field input {
+  width: 280px;
+  height: 50px;
+  line-height: 1.5em;
+  padding: 10px;
+  padding-top: 33px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: white;
+}
+#auth section #register .actions div {
+  display: inline;
+}
+#auth section #register .actions div a {
+  position: relative;
+  left: 30px;
+  top: 30px;
+  color: white;
+  font-size: 14px;
+}
+#auth section #register .actions button {
+  position: relative;
+  color: white;
+  width: 110px;
+  height: 48px;
+  background: #101D1D;
+  box-shadow: 0px 10px 10px rgba(255, 118, 12, 0.1);
+  border-radius: 10px;
+  right: 30px;
+  top: 40px;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 201px;
-  margin: 40px 0 0 0;
-}
-#bg header figure :first-child {
-  width: 100px;
-}
-#bg header figure :last-child {
-  width: 215px;
-}
-#bg .rectangle {
-  width: 100vw;
-  top: 350px;
-  height: 80px;
-  background-color: var(--bg-rectangle);
-  margin: 0;
 }
 
+@media (min-width: 1200px) {
+  #bg .header a .logo {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  #bg .header a .logo .img1 {
+    width: 150px;
+  }
+  #bg .header a .logo .img2 {
+    position: relative;
+    top: 25px;
+    margin-left: 30px;
+    width: 280px;
+  }
+}
 .app {
   background-color: var(--black-3);
 }
