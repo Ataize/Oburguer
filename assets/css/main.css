@@ -394,7 +394,7 @@ body > main {
 }
 .app #header {
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 350px;
   background-image: url("../images/image 2.png");
   background-size: cover;
@@ -414,6 +414,7 @@ body > main {
   flex-direction: column;
   align-items: center;
   margin: 0;
+  width: 400px;
 }
 .app #header #logo figure :first-child {
   width: 100px;
@@ -429,7 +430,7 @@ body > main {
   justify-content: start;
 }
 .app main .rectangle {
-  width: 100vw;
+  width: 100%;
   top: 350px;
   height: 80px;
   background-color: var(--bg-rectangle);
