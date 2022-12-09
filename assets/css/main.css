@@ -394,12 +394,19 @@ body > main {
 }
 .app #header {
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 350px;
   background-image: url("../images/image 2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 30px;
+  padding: 0px;
+}
+.app #header .overley {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.336);
 }
 .app #header #img-user {
   width: 50px;
@@ -411,13 +418,17 @@ body > main {
   width: 220px;
 }
 .app #header #logo figure {
+  position: relative;
+  top: 90px;
+  z-index: 1;
+  width: 400px;
   flex-direction: column;
   align-items: center;
   margin: 0;
 }
 .app #header #logo figure :first-child {
   width: 100px;
-  height: 127px;
+  height: 127p;
 }
 .app #header #logo figure :last-child {
   width: 215px;
@@ -429,7 +440,7 @@ body > main {
   justify-content: start;
 }
 .app main .rectangle {
-  width: 100vw;
+  width: 100%;
   top: 350px;
   height: 80px;
   background-color: var(--bg-rectangle);
