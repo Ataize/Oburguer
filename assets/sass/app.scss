@@ -7,7 +7,14 @@
         background-image: url("../images/image 2.png");
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 30px;
+        padding: 0px;
+        .overley {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 450px;
+            background-color: rgba(0, 0, 0, 0.336);
+        } 
 
         #img-user {
             width: 50px;
@@ -18,13 +25,17 @@
             align-self: center;
             width: 220px;
             figure {
+                position: relative;
+                top: 90px;
+                z-index: 1;
+                width: 400px;
                 flex-direction: column;
                 align-items: center;
                 margin: 0;
                 width: 400px;
                 :first-child{
                     width: 100px;
-                    height: 127px;
+                    height: 127p;
                 }
                 :last-child {
                     width: 215px;
