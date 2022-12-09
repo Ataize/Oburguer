@@ -399,6 +399,7 @@ body > main {
   background-image: url("../images/image 2.png");
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 30px;
 }
 .app #header #img-user {
   width: 50px;
@@ -406,18 +407,13 @@ body > main {
   align-self: self-end;
 }
 .app #header #logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-self: center;
+  width: 220px;
 }
 .app #header #logo figure {
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 201px;
-  margin: 40px 0;
+  margin: 0;
 }
 .app #header #logo figure :first-child {
   width: 100px;
@@ -426,6 +422,7 @@ body > main {
 .app #header #logo figure :last-child {
   width: 215px;
   height: 59px;
+  margin-left: 15px;
 }
 .app main {
   flex-direction: column;
@@ -472,8 +469,12 @@ body > main {
   width: 32px;
   height: 32px;
   margin-right: 5px;
-  background: #070D0D;
+  background: rgba(7, 13, 13, 0.3764705882);
   border: 1px solid rgba(27, 154, 246, 0.5);
+}
+.app main .options div label .content .square:hover {
+  border: 2px solid rgba(17, 57, 238, 0.5);
+  cursor: pointer;
 }
 .app main .options div label .content div {
   flex-direction: column;
@@ -491,17 +492,79 @@ body > main {
   width: 100%;
   margin: 0;
 }
+.app footer {
+  background-color: var(--white);
+  justify-content: space-between;
+}
+.app footer .ver-bandeja {
+  width: 50%;
+  max-width: 190px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 10px;
+}
+.app footer .ver-bandeja button {
+  align-items: center;
+  height: 100%;
+  max-width: 215px;
+  align-self: flex-start;
+  padding-left: 15px;
+  border-color: transparent;
+  background-color: var(--white);
+}
+.app footer .ver-bandeja button div {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 10px;
+  font-size: 10px;
+}
+.app footer .ver-bandeja button div :last-child {
+  font-weight: bold;
+}
+.app footer .subtotal {
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--gray);
+}
+.app footer .subtotal div {
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 10px;
+}
+.app footer .subtotal div span {
+  font-weight: bold;
+  font-size: 20px;
+}
+.app footer .subtotal div small {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.app footer .btn-pay {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  color: var(--white);
+  text-transform: uppercase;
+  max-width: 64px;
+  height: 64px;
+  border-color: transparent;
+  font-size: 13px;
+}
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .app #header {
     background-image: url("../images/image 2banner.png");
+    height: 450px;
   }
   .app #header #logo figure {
     flex-direction: row;
     align-items: center;
   }
   .app #header #logo figure :first-child {
-    width: 126x;
+    width: 126px;
     height: 160px;
   }
   .app #header #logo figure :last-child {
