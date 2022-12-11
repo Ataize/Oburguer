@@ -405,7 +405,7 @@ body > main {
   position: absolute;
   z-index: 1;
   width: 100%;
-  height: 450px;
+  height: 350px;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(7, 7, 7, 0.856));
 }
 .app #header #img-user {
@@ -502,19 +502,65 @@ body > main {
   width: 100%;
   margin: 0;
 }
-.app footer {
+.app aside {
+  position: fixed;
+  background-color: var(--white);
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  right: 0;
+}
+.app aside header {
+  display: none;
+}
+.app aside header svg {
+  width: 64px;
+  height: 64px;
+}
+.app aside header div {
+  flex-direction: column;
+  font-size: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 15px;
+}
+.app aside header div :first-child {
+  font-weight: bold;
+}
+.app aside > section {
+  display: none;
+  padding-top: 40px;
+  flex-direction: column;
+  width: 100%;
+  min-height: 400px;
+}
+.app aside > section div {
+  font-size: 16px;
+  font-weight: bold;
+  justify-content: space-between;
+  width: 100%;
+}
+.app aside > section hr {
+  border-bottom: 1px dotted var(--black-3);
+  width: 100%;
+  border-top: none;
+}
+.app aside .footer-aside {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   background-color: var(--white);
   justify-content: space-between;
+  left: 0;
 }
-.app footer .ver-bandeja {
+.app aside .footer-aside .ver-bandeja {
   width: 50%;
   max-width: 190px;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  padding: 0 10px;
 }
-.app footer .ver-bandeja button {
+.app aside .footer-aside .ver-bandeja button {
   align-items: center;
   height: 100%;
   max-width: 215px;
@@ -523,51 +569,57 @@ body > main {
   border-color: transparent;
   background-color: var(--white);
 }
-.app footer .ver-bandeja button div {
+.app aside .footer-aside .ver-bandeja button div {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding-left: 10px;
   font-size: 10px;
 }
-.app footer .ver-bandeja button div :last-child {
+.app aside .footer-aside .ver-bandeja button div :last-child {
   font-weight: bold;
 }
-.app footer .subtotal {
+.app aside .footer-aside .ver-bandeja .btn-esconder {
+  display: none;
+}
+.app aside .footer-aside .subtotal {
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   background-color: var(--gray);
 }
-.app footer .subtotal div {
+.app aside .footer-aside .subtotal div {
   flex-direction: column;
   align-items: flex-end;
   padding: 0 10px;
 }
-.app footer .subtotal div span {
+.app aside .footer-aside .subtotal div span {
   font-weight: bold;
   font-size: 20px;
 }
-.app footer .subtotal div small {
+.app aside .footer-aside .subtotal div small {
   text-transform: uppercase;
   font-size: 10px;
 }
-.app footer .btn-pay {
+.app aside .footer-aside .btn-pay {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--blue);
   color: var(--white);
   text-transform: uppercase;
-  max-width: 64px;
   height: 64px;
   border-color: transparent;
   font-size: 13px;
+}
+.app footer {
+  display: none;
 }
 
 @media (min-width: 1024px) {
   .app #header {
     background-image: url("../images/image 2banner.png");
-    height: 450px;
+    width: calc(100% - 400px);
   }
   .app #header #logo figure {
     flex-direction: row;
@@ -593,6 +645,71 @@ body > main {
   }
   .app main .options div label .content div {
     align-items: flex-start;
+  }
+  .app aside {
+    width: 400px;
+    height: 100%;
+    z-index: 3;
+    padding: 30px;
+  }
+  .app aside header {
+    display: flex;
+  }
+  .app aside > section {
+    display: flex;
+  }
+  .app aside .footer-aside {
+    display: flex;
+    position: absolute;
+    width: 400px;
+    right: 0;
+    background-color: var(--gray);
+    justify-content: space-between;
+  }
+  .app aside .footer-aside .ver-bandeja {
+    display: none;
+  }
+  .app aside .footer-aside .ver-bandeja .btn-bandeja {
+    display: none;
+  }
+  .app aside .footer-aside .btn-pay {
+    width: 120px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .app aside .footer-aside .subtotal {
+    width: 100%;
+    padding-left: 15px;
+  }
+  .app aside .footer-aside .subtotal div {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .app aside .footer-aside .subtotal div span {
+    font-size: 24px;
+  }
+  .app footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    height: 64px;
+    width: calc(100% - 400px);
+    background-color: var(--gray);
+    align-items: center;
+  }
+  .app footer button {
+    width: 200px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background-color: var(--blue);
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: transparent;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(255, 118, 12, 0.1);
   }
 }
 
