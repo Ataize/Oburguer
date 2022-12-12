@@ -423,6 +423,7 @@ body > main {
   z-index: 1;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 0;
 }
 .app #header #logo figure :first-child {
@@ -504,7 +505,6 @@ body > main {
   margin: 0;
 }
 .app aside {
-  position: fixed;
   background-color: var(--white);
   flex-direction: column;
   align-items: flex-start;
@@ -619,7 +619,6 @@ body > main {
 
 @media (min-width: 1024px) {
   .app #header {
-    background-image: url("../images/image 2banner.png");
     width: calc(100% - 400px);
   }
   .app #header #logo figure {
@@ -648,6 +647,7 @@ body > main {
     align-items: flex-start;
   }
   .app aside {
+    position: fixed;
     width: 400px;
     height: 100%;
     z-index: 3;

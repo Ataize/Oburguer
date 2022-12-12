@@ -29,9 +29,9 @@
                 position: relative;
                 top: 90px;
                 z-index: 1;
-              
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
                 margin: 0;
               
                 :first-child{
@@ -118,15 +118,14 @@
         }
     }
     aside {
-        position: fixed;
+       
         background-color: var(--white);
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-       
         right: 0;
         header {
-            display: none;
+             display: none;
             svg {
                 width: 64px;
                 height: 64px;
@@ -243,7 +242,7 @@
 @media (min-width: 1024px){
     .app {
         #header {
-            background-image: url('../images/image\ 2banner.png');
+          
             width: calc(100% - 400px);
             #logo {
                 figure {
@@ -283,6 +282,7 @@
             }
         }
         aside {
+            position: fixed;
             width: 400px;
             height: 100%;
             z-index: 3;
