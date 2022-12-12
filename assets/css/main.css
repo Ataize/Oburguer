@@ -437,6 +437,7 @@ body > main {
 .app main {
   flex-direction: column;
   justify-content: start;
+  margin-bottom: 100px;
 }
 .app main .rectangle {
   width: 100%;
@@ -612,7 +613,7 @@ body > main {
   border-color: transparent;
   font-size: 13px;
 }
-.app footer {
+.app .footer-app {
   display: none;
 }
 
@@ -688,7 +689,7 @@ body > main {
   .app aside .footer-aside .subtotal div span {
     font-size: 24px;
   }
-  .app footer {
+  .app .footer-app {
     display: flex;
     position: fixed;
     bottom: 0;
@@ -697,7 +698,7 @@ body > main {
     background-color: var(--gray);
     align-items: center;
   }
-  .app footer button {
+  .app .footer-app button {
     width: 200px;
     height: 48px;
     align-items: center;

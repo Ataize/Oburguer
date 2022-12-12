@@ -49,6 +49,7 @@
     main {
         flex-direction: column;
         justify-content: start;
+        margin-bottom: 100px;
         .rectangle {
             width: 100%;
             top: 350px;
@@ -235,7 +236,7 @@
             }
         }
     }
-    footer {
+    .footer-app {
         display: none;
     }
 }
@@ -323,7 +324,7 @@
                 }
             }
         }
-        footer {
+        .footer-app {
             display: flex;
             position: fixed;
             bottom: 0;
