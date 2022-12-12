@@ -613,6 +613,22 @@ body > main {
   border-color: transparent;
   font-size: 13px;
 }
+.app aside.open {
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  top: 355px;
+  padding: 20px;
+}
+.app aside.open header, .app aside.open > section {
+  display: flex;
+}
+.app aside.open .ver-bandeja .btn-esconder {
+  display: flex;
+}
+.app aside.open .ver-bandeja .btn-bandeja {
+  display: none;
+}
 .app .footer-app {
   display: none;
 }
@@ -652,6 +668,7 @@ body > main {
     height: 100%;
     z-index: 3;
     padding: 30px;
+    top: 0;
   }
   .app aside header {
     display: flex;
@@ -688,6 +705,9 @@ body > main {
   }
   .app aside .footer-aside .subtotal div span {
     font-size: 24px;
+  }
+  .app aside.open {
+    top: 0;
   }
   .app .footer-app {
     display: flex;

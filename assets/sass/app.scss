@@ -234,6 +234,24 @@
                 font-size: 13px;
             }
         }
+        &.open {
+            height: 100vh;
+            position: absolute;
+            z-index: 2;
+            top: 355px;
+            padding: 20px;
+            header, >section {
+                display: flex;
+            }
+            .ver-bandeja {
+                .btn-esconder{
+                    display: flex;
+                }
+                .btn-bandeja {
+                    display: none;
+                }
+            }
+        }
     }
     .footer-app {
         display: none;
@@ -287,6 +305,7 @@
             height: 100%;
             z-index: 3;
             padding: 30px;
+            top: 0;
             header {
                 display: flex;
             }
@@ -322,6 +341,9 @@
                         }
                     }
                 }
+            }
+            &.open {
+                top:0;
             }
         }
         .footer-app {
