@@ -85,6 +85,7 @@
                     input {
                         display: none;
                     }
+                    
                     .square {
                         width: 32px;
                         height: 32px;
@@ -92,9 +93,16 @@
                         background: #070d0d60;
                         border: 1px solid rgba(27, 154, 246, 0.5);
                         &:hover {
-                            border: 2px solid rgba(17, 57, 238, 0.5);
+                            border: 3px solid rgba(27, 154, 246, 0.5);
                             cursor: pointer;
+                          
                         }
+                    
+                    }
+                    input:checked + .square{
+                        border: 3px solid var(--gray);
+                        background-color:var(--blue);
+                      
                     }
                     div {
                         flex-direction: column;
@@ -184,13 +192,14 @@
                     padding-left: 15px;
                     border-color: transparent;
                     background-color: var(--white);
+                    cursor: pointer;
+                    
                     div {
                         flex-direction: column;
                         align-items: flex-start;
                         justify-content: center;
                         padding-left: 10px;
                         font-size: 10px;
-    
                         :last-child{
                             font-weight: bold;
                         }
@@ -199,6 +208,7 @@
                 .btn-esconder {
                     display: none;
                 }
+               
             }
             .subtotal {
                 flex-direction: row;
@@ -228,10 +238,13 @@
                 background-color: var(--blue);
                 color: var(--white);
                 text-transform: uppercase;
-               
                 height: 64px;
                 border-color: transparent;
                 font-size: 13px;
+              
+            }
+            .btn-pay:hover {
+                background-color: var(--blue-3);
             }
         }
         &.open {
@@ -325,11 +338,13 @@
                         display: none;
                     }
                 }
+               
                 .btn-pay {
                     width: 120px;
                     flex-direction: row;
                     justify-content: space-around;
                 }
+                
                 .subtotal {
                     width: 100%;
                     padding-left: 15px;
@@ -368,6 +383,12 @@
                 border-radius: 5px;
                 box-shadow: 0px 10px 10px rgba(255, 118, 12, 0.1);
             }
+            :hover {
+                cursor: pointer;
+                background-color: var(--blue-3);
+                box-shadow: 0px 15px 15px rgba(255, 118, 12, 0.1);
+               
+            }   
         }
     }
 }
