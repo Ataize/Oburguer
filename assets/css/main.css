@@ -416,11 +416,11 @@ body > main {
 .app #header #logo {
   align-self: center;
   width: 220px;
-}
-.app #header #logo figure {
   position: relative;
   top: 90px;
   z-index: 1;
+}
+.app #header #logo figure {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -545,6 +545,15 @@ body > main {
   justify-content: space-between;
   width: 100%;
 }
+.app aside > section div div {
+  width: 40%;
+  align-items: center;
+}
+.app aside > section div div button {
+  border: 0;
+  background-color: var(--white);
+  cursor: pointer;
+}
 .app aside > section hr {
   border-bottom: 1px dotted var(--black-3);
   width: 100%;
@@ -608,15 +617,19 @@ body > main {
   font-size: 10px;
 }
 .app aside .footer-aside .btn-pay {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--blue);
   color: var(--white);
   text-transform: uppercase;
+  min-width: 50px;
   height: 64px;
   border-color: transparent;
   font-size: 13px;
+  padding: 10px;
+  text-decoration: none;
 }
 .app aside .footer-aside .btn-pay:hover {
   background-color: var(--blue-3);
