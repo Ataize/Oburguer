@@ -1,0 +1,66 @@
+#order {
+    align-items: center;
+    justify-content: center;
+    .ticket {
+        position: relative;
+        bottom: -60px;
+        font-weight: bold;
+        justify-content: center;
+        width: 40px;
+        height: 28px;
+        font-size: 24px;
+        color: black;
+        transform: rotate(-90deg)
+    }
+    .detail{
+        margin: 30px;
+        width: 350px;
+        height: 150px;
+        border-radius: 10px;
+        background-color: white;
+
+    }
+    .description {
+        
+        flex-direction: column;
+        h1 {
+            margin: 5px 5px 0 0;
+            padding-top: 8px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            width: 235px;
+            height: 33px;
+            background-color:#1F3BE5 ;
+            text-transform: uppercase;
+        }
+        >div {
+            flex-direction: column;
+            text-align: center;
+            width: 250px;
+            justify-content: space-between;
+            p{  
+                text-transform: uppercase;
+                margin: 2px;
+            }
+
+        }
+
+    }
+    .icon {
+        margin: 5px;
+        justify-content: center;
+        flex-direction: column;
+        background-color:red;
+        a {
+            
+            img {
+                width: 35px;
+                height: 100%;
+            }
+        }
+
+
+    }
+
+}

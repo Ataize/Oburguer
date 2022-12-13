@@ -62,39 +62,88 @@ body > main {
   min-height: calc(100vh - 400px);
 }
 
-.page1 {
+body {
+  background-color: var(--bg-1);
+}
+body #header {
+  width: 100%;
   background-color: var(--bg-1);
   background-image: url("../images/Group.png");
   background-repeat: repeat;
-}
-.page1 a {
   width: 100%;
-}
-.page1 header {
-  justify-content: center;
-  height: 350px;
-  width: 100vw;
-}
-.page1 header figure {
-  flex-direction: column;
+  height: 200px;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 201px;
-  margin: 40px 0 0 0;
 }
-.page1 header figure :first-child {
-  width: 100px;
+body #header a figure {
+  flex-direction: column;
+  align-items: center;
 }
-.page1 header figure :last-child {
+body #header a figure :first-child {
+  width: 90px;
+  height: auto;
+}
+body #header a figure :last-child {
   width: 215px;
+  height: auto;
 }
-.page1 .rectangle {
-  width: 100vw;
-  top: 350px;
-  height: 80px;
-  background-color: var(--bg-rectangle);
+body main {
   margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+}
+body main .content {
+  height: 520px;
+  width: auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+body main .content input {
+  display: none;
+}
+body main .content .slides {
+  display: flex;
+  width: 500%;
+  height: 100%;
+}
+body main .content .slides .slide {
+  width: 25%;
+  transition: 0.6s;
+}
+body main .content .slides .slide img {
+  width: 100%;
+  height: 100%;
+}
+body main .content .slides #slide1:checked ~ .s1 {
+  margin-left: 0;
+}
+body main .content .slides #slide2:checked ~ .s1 {
+  margin-left: -25%;
+}
+body main .content .slides #slide3:checked ~ .s1 {
+  margin-left: -50%;
+}
+body main .content .slides #slide4:checked ~ .s1 {
+  margin-left: -75%;
+}
+body main .content .navigation {
+  position: absolute;
+  display: flex;
+  color: white;
+}
+body main .content .navigation .bar {
+  width: 70px;
+  height: 17px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+body main .content .navigation .bar:hover {
+  background-color: #fff;
 }
 
 #bg {
@@ -758,6 +807,62 @@ body > main {
     background-color: var(--blue-3);
     box-shadow: 0px 15px 15px rgba(255, 118, 12, 0.1);
   }
+}
+#order {
+  align-items: center;
+  justify-content: center;
+}
+#order .ticket {
+  position: relative;
+  bottom: -60px;
+  font-weight: bold;
+  justify-content: center;
+  width: 40px;
+  height: 28px;
+  font-size: 24px;
+  color: black;
+  transform: rotate(-90deg);
+}
+#order .detail {
+  margin: 30px;
+  width: 350px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: white;
+}
+#order .description {
+  flex-direction: column;
+}
+#order .description h1 {
+  margin: 5px 5px 0 0;
+  padding-top: 8px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  width: 235px;
+  height: 33px;
+  background-color: #1F3BE5;
+  text-transform: uppercase;
+}
+#order .description > div {
+  flex-direction: column;
+  text-align: center;
+  width: 250px;
+  justify-content: space-between;
+}
+#order .description > div p {
+  text-transform: uppercase;
+  margin: 2px;
+}
+#order .icon {
+  margin: 5px;
+  justify-content: center;
+  flex-direction: column;
+  background-color: red;
+}
+#order .icon a img {
+  width: 35px;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
