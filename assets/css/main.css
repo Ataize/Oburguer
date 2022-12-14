@@ -464,7 +464,7 @@ body .main-page1 .content .navigation .bar:hover {
 }
 .app #header #logo {
   align-self: center;
-  width: 220px;
+  width: 100%;
   position: relative;
   top: 90px;
   z-index: 1;
@@ -787,6 +787,7 @@ body .main-page1 .content .navigation .bar:hover {
     width: calc(100% - 400px);
     background-color: var(--gray);
     align-items: center;
+    left: 0;
   }
   .app .footer-app button {
     width: 200px;
