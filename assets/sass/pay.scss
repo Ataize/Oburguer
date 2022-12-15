@@ -6,9 +6,13 @@
         .pay {
          align-items: center;
          justify-content: center;
+         main {
+            
+         }
          .card {
             background-color: var(--white);
             width: 100%;
+            margin-bottom: 0;
             section{
                 flex-direction: column;
                 padding: 20px;

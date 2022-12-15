@@ -50,7 +50,7 @@
 
         flex-direction: column;
         justify-content: start;
-        margin-bottom: 100px;
+       
         .rectangle {
             width: 100%;
             top: 350px;
@@ -71,6 +71,7 @@
         }
         .options {
             padding: 0 20px;
+            margin-bottom: 100px;
             div {
                 flex-direction: column;
                h2{
@@ -126,13 +127,14 @@
             }
         }
     }
-    aside {
+    aside, .open {
        
         background-color: var(--white);
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
         right: 0;
+        margin-bottom: 100px;
         header {
              display: none;
             svg {
@@ -335,7 +337,7 @@
                 }
             }
         }
-        aside {
+        aside, .open {
             position: fixed;
             width: 400px;
             height: 100%;

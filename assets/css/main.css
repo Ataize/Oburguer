@@ -488,7 +488,6 @@ body .main-page1 .content .navigation .bar:hover {
 .app main {
   flex-direction: column;
   justify-content: start;
-  margin-bottom: 100px;
 }
 .app main .rectangle {
   width: 100%;
@@ -510,6 +509,7 @@ body .main-page1 .content .navigation .bar:hover {
 }
 .app main .options {
   padding: 0 20px;
+  margin-bottom: 100px;
 }
 .app main .options div {
   flex-direction: column;
@@ -558,58 +558,59 @@ body .main-page1 .content .navigation .bar:hover {
   width: 100%;
   margin: 0;
 }
-.app aside {
+.app aside, .app .open {
   background-color: var(--white);
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
   right: 0;
+  margin-bottom: 100px;
 }
-.app aside header {
+.app aside header, .app .open header {
   display: none;
 }
-.app aside header svg {
+.app aside header svg, .app .open header svg {
   width: 64px;
   height: 64px;
 }
-.app aside header div {
+.app aside header div, .app .open header div {
   flex-direction: column;
   font-size: 24px;
   align-items: flex-start;
   justify-content: center;
   padding-left: 15px;
 }
-.app aside header div :first-child {
+.app aside header div :first-child, .app .open header div :first-child {
   font-weight: bold;
 }
-.app aside > section {
+.app aside > section, .app .open > section {
   display: none;
   padding-top: 40px;
   flex-direction: column;
   width: 100%;
   min-height: 400px;
 }
-.app aside > section div {
+.app aside > section div, .app .open > section div {
   font-size: 16px;
   font-weight: bold;
   justify-content: space-between;
   width: 100%;
 }
-.app aside > section div div {
+.app aside > section div div, .app .open > section div div {
   width: 40%;
   align-items: center;
 }
-.app aside > section div div button {
+.app aside > section div div button, .app .open > section div div button {
   border: 0;
   background-color: var(--white);
   cursor: pointer;
 }
-.app aside > section hr {
+.app aside > section hr, .app .open > section hr {
   border-bottom: 1px dotted var(--black-3);
   width: 100%;
   border-top: none;
 }
-.app aside .footer-aside {
+.app aside .footer-aside, .app .open .footer-aside {
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -617,14 +618,14 @@ body .main-page1 .content .navigation .bar:hover {
   justify-content: space-between;
   left: 0;
 }
-.app aside .footer-aside .ver-bandeja {
+.app aside .footer-aside .ver-bandeja, .app .open .footer-aside .ver-bandeja {
   width: 50%;
   max-width: 190px;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
 }
-.app aside .footer-aside .ver-bandeja button {
+.app aside .footer-aside .ver-bandeja button, .app .open .footer-aside .ver-bandeja button {
   align-items: center;
   height: 100%;
   max-width: 215px;
@@ -634,39 +635,39 @@ body .main-page1 .content .navigation .bar:hover {
   background-color: var(--white);
   cursor: pointer;
 }
-.app aside .footer-aside .ver-bandeja button div {
+.app aside .footer-aside .ver-bandeja button div, .app .open .footer-aside .ver-bandeja button div {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding-left: 10px;
   font-size: 10px;
 }
-.app aside .footer-aside .ver-bandeja button div :last-child {
+.app aside .footer-aside .ver-bandeja button div :last-child, .app .open .footer-aside .ver-bandeja button div :last-child {
   font-weight: bold;
 }
-.app aside .footer-aside .ver-bandeja .btn-esconder {
+.app aside .footer-aside .ver-bandeja .btn-esconder, .app .open .footer-aside .ver-bandeja .btn-esconder {
   display: none;
 }
-.app aside .footer-aside .subtotal {
+.app aside .footer-aside .subtotal, .app .open .footer-aside .subtotal {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: var(--gray);
 }
-.app aside .footer-aside .subtotal div {
+.app aside .footer-aside .subtotal div, .app .open .footer-aside .subtotal div {
   flex-direction: column;
   align-items: flex-end;
   padding: 0 10px;
 }
-.app aside .footer-aside .subtotal div span {
+.app aside .footer-aside .subtotal div span, .app .open .footer-aside .subtotal div span {
   font-weight: bold;
   font-size: 20px;
 }
-.app aside .footer-aside .subtotal div small {
+.app aside .footer-aside .subtotal div small, .app .open .footer-aside .subtotal div small {
   text-transform: uppercase;
   font-size: 10px;
 }
-.app aside .footer-aside .btn-pay {
+.app aside .footer-aside .btn-pay, .app .open .footer-aside .btn-pay {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -681,23 +682,23 @@ body .main-page1 .content .navigation .bar:hover {
   padding: 10px;
   text-decoration: none;
 }
-.app aside .footer-aside .btn-pay:hover {
+.app aside .footer-aside .btn-pay:hover, .app .open .footer-aside .btn-pay:hover {
   background-color: var(--blue-3);
 }
-.app aside.open {
+.app aside.open, .app .open.open {
   height: 100vh;
   position: absolute;
   z-index: 2;
   top: 355px;
   padding: 20px;
 }
-.app aside.open header, .app aside.open > section {
+.app aside.open header, .app aside.open > section, .app .open.open header, .app .open.open > section {
   display: flex;
 }
-.app aside.open .ver-bandeja .btn-esconder {
+.app aside.open .ver-bandeja .btn-esconder, .app .open.open .ver-bandeja .btn-esconder {
   display: flex;
 }
-.app aside.open .ver-bandeja .btn-bandeja {
+.app aside.open .ver-bandeja .btn-bandeja, .app .open.open .ver-bandeja .btn-bandeja {
   display: none;
 }
 .app .footer-app {
@@ -739,7 +740,7 @@ body .main-page1 .content .navigation .bar:hover {
   .app main .options div label .content div {
     align-items: flex-start;
   }
-  .app aside {
+  .app aside, .app .open {
     position: fixed;
     width: 400px;
     height: 100%;
@@ -747,13 +748,13 @@ body .main-page1 .content .navigation .bar:hover {
     padding: 30px;
     top: 0;
   }
-  .app aside header {
+  .app aside header, .app .open header {
     display: flex;
   }
-  .app aside > section {
+  .app aside > section, .app .open > section {
     display: flex;
   }
-  .app aside .footer-aside {
+  .app aside .footer-aside, .app .open .footer-aside {
     display: flex;
     position: absolute;
     width: 400px;
@@ -761,29 +762,29 @@ body .main-page1 .content .navigation .bar:hover {
     background-color: var(--gray);
     justify-content: space-between;
   }
-  .app aside .footer-aside .ver-bandeja {
+  .app aside .footer-aside .ver-bandeja, .app .open .footer-aside .ver-bandeja {
     display: none;
   }
-  .app aside .footer-aside .ver-bandeja .btn-bandeja {
+  .app aside .footer-aside .ver-bandeja .btn-bandeja, .app .open .footer-aside .ver-bandeja .btn-bandeja {
     display: none;
   }
-  .app aside .footer-aside .btn-pay {
+  .app aside .footer-aside .btn-pay, .app .open .footer-aside .btn-pay {
     width: 120px;
     flex-direction: row;
     justify-content: space-around;
   }
-  .app aside .footer-aside .subtotal {
+  .app aside .footer-aside .subtotal, .app .open .footer-aside .subtotal {
     width: 100%;
     padding-left: 15px;
   }
-  .app aside .footer-aside .subtotal div {
+  .app aside .footer-aside .subtotal div, .app .open .footer-aside .subtotal div {
     flex-direction: column-reverse;
     align-items: flex-start;
   }
-  .app aside .footer-aside .subtotal div span {
+  .app aside .footer-aside .subtotal div span, .app .open .footer-aside .subtotal div span {
     font-size: 24px;
   }
-  .app aside.open {
+  .app aside.open, .app .open.open {
     top: 0;
   }
   .app .footer-app {
@@ -906,6 +907,7 @@ body .main-page1 .content .navigation .bar:hover {
 .app .pay .card {
   background-color: var(--white);
   width: 100%;
+  margin-bottom: 0;
 }
 .app .pay .card section {
   flex-direction: column;
