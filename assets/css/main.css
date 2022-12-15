@@ -34,12 +34,13 @@
   --black-2:#0C0B0B;
   --black-3:#070D0D;
   --bg-1:#08182A;
-  --bg-rectangle:#202F3F;
+  --bg-rectangle: rgba(255, 255, 255, 0.1);
   --blue:#1F3BE5;
   --blue-2:#223A95;
   --blue-3:#1B9AF6;
   --gray:#E3E3E3;
   --white:#FFFFFF;
+  --border:#D7D7D7;
 }
 
 * {
@@ -441,7 +442,7 @@ body .main-page1 .content .navigation .bar:hover {
 .app {
   background-color: var(--black-3);
 }
-.app #header {
+.app .header {
   flex-direction: column;
   width: 100%;
   height: 350px;
@@ -450,36 +451,36 @@ body .main-page1 .content .navigation .bar:hover {
   background-repeat: no-repeat;
   padding: 0px;
 }
-.app #header .overley {
+.app .header .overley {
   position: absolute;
   z-index: 1;
   width: 100%;
   height: 350px;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(7, 7, 7, 0.856));
 }
-.app #header #img-user {
+.app .header #img-user {
   width: 50px;
   height: 50px;
   align-self: self-end;
 }
-.app #header #logo {
+.app .header #logo {
   align-self: center;
   width: 100%;
   position: relative;
   top: 90px;
   z-index: 1;
 }
-.app #header #logo figure {
+.app .header #logo figure {
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
 }
-.app #header #logo figure :first-child {
+.app .header #logo figure :first-child {
   width: 100px;
   height: 127px;
 }
-.app #header #logo figure :last-child {
+.app .header #logo figure :last-child {
   width: 215px;
   height: 59px;
   margin-left: 15px;
@@ -704,26 +705,32 @@ body .main-page1 .content .navigation .bar:hover {
 }
 
 @media (min-width: 1024px) {
-  .app #header {
+  .app .header {
+    height: 450px;
+  }
+  .app .header .overley {
+    height: 450px;
+  }
+  .app .header.lado {
     width: calc(100% - 400px);
   }
-  .app #header #logo figure {
+  .app .header.lado #logo figure {
     flex-direction: row;
     align-items: center;
   }
-  .app #header #logo figure :first-child {
+  .app .header.lado #logo figure :first-child {
     width: 126px;
     height: 160px;
   }
-  .app #header #logo figure :last-child {
+  .app .header.lado #logo figure :last-child {
     width: 273px;
     height: 70px;
     margin-top: 30px;
   }
-  .app main .rectangle {
+  .app main .rectangle.aside {
     justify-content: flex-start;
   }
-  .app main .rectangle h1 {
+  .app main .rectangle.aside h1 {
     margin-left: 50px;
   }
   .app main .options {
@@ -887,6 +894,93 @@ body .main-page1 .content .navigation .bar:hover {
     align-items: center;
     justify-content: start;
     margin-left: 20px;
+  }
+}
+.app .header {
+  width: 100%;
+}
+.app .pay {
+  align-items: center;
+  justify-content: center;
+}
+.app .pay .card {
+  background-color: var(--white);
+  width: 100%;
+}
+.app .pay .card section {
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+}
+.app .pay .card section .field {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+}
+.app .pay .card section .field input {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  color: rgba(31, 37, 37, 0.5);
+}
+.app .pay .card section .field :focus {
+  outline: 0;
+}
+.app .pay .card section .field:hover {
+  border: 1px solid var(--blue);
+}
+.app .pay .card section .fields {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.app .pay .card section .fields input {
+  width: 100px;
+  font-size: 16px;
+  outline: 0;
+}
+.app .pay .card section .fields input:hover {
+  border: 1px solid var(--blue);
+}
+.app .pay .card section .fields :last-child {
+  flex: 2;
+  margin-left: 5px;
+}
+.app .pay .card button {
+  background-color: var(--blue);
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 65px;
+  border: transparent;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .app .header {
+    position: relative;
+  }
+  .app .pay .card {
+    width: 600px;
+  }
+  .app .pay .card section .fields input {
+    width: 50%;
+  }
+  .app .pay .card section .fields :last-child {
+    flex: 1;
+  }
+  .app .pay .card button {
+    position: sticky;
+    width: 100%;
   }
 }
 
