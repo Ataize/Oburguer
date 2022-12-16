@@ -33,11 +33,35 @@ body {
     }
     
     .main-page1 {
+        flex-direction: column;
         margin: 0;
         padding: 0;
-        height: 100vh;
+        height: 80vh;
         width: 100%;
         justify-content: center;
+        align-items: center;
+        .btn-login {
+            margin: 20px;
+            width: 250px;
+            height: 50px;
+            border: blue solid 2px;
+            background: #1F3BE5;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            transition: .5s;
+            a{
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+                width: 250px;
+                height: 50px;
+                text-align: center;
+            }
+            &:hover {
+                background-color: #1f39e57a;
+            }
+        }
         .content {
             height: 520px;
             width: auto;
@@ -86,14 +110,45 @@ body {
                     transition: .4s;
                     &:hover {
                         background-color: #fff;
-                    }
-                    
+                    }   
                 }
-
+            }    
+        }
+    }
+    #footer {
+        align-items: center;
+        justify-content: center;
+       
+        width: 100%;
+        height: 190px;
+        >div {
+            width: 100%;
+            justify-content: center;
+            ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                
+                li{
+                    margin: 10px 0 10px 0;
+                    color: white;
+                    font-size:1.4rem  ;
+                    a {
+                        color: rgb(162, 171, 250);
+                        font-size: 1.2rem ;
+                    }
+                }
+                .social {
+                    a {
+                       
+                        width:auto;
+                        img {
+                            margin: 20px;
+                            width: 50px;
+                        }
+                    }
+                }
             }
-            
-           
-            
         }
     }
        
