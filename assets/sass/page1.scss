@@ -1,3 +1,5 @@
+body {
+    background-color: var(--bg-1);
     #header-page1 {
         width: 100%;
         background-color: var(--bg-1);
@@ -22,13 +24,9 @@
                     height: auto;
                     
                 }
-
             }
         }
-        
-    
     }
-    
     .main-page1 {
         flex-direction: column;
         margin: 0;
@@ -46,14 +44,10 @@
         }
         .btn-login {
             margin: 20px;
-            width: 200px;
+            width: 250px;
             height: 50px;
             border: blue solid 2px;
             background: #1F3BE5;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            transition: .5s;
             a{
                 color: white;
                 text-decoration: none;
@@ -72,9 +66,9 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            
+
             .argentina {
-                
+
                 justify-content: center;
                 width: 400px;
                 height: auto;
@@ -100,22 +94,17 @@
                 height: 100px;
                 align-items: center;
                 justify-content: center;
-                position: relative;
+                position: relative; 
                 img {
                     width: 40px;
-                }
-
+                }   
             }
-
-            
         }
-    }
-<<<<<<< HEAD
-=======
+    }    
     #footer {
         align-items: center;
         justify-content: center;
-       
+
         width: 100%;
         height: 190px;
         >div {
@@ -125,11 +114,11 @@
                 flex-direction: column;
                 align-items: center;
                 padding: 0;
-                
+
                 li{
                     margin: 10px 0 10px 0;
                     color: white;
-                    font-size:.8rem  ;
+                    font-size:.8rem;
                     a {
                         color: rgb(162, 171, 250);
                         font-size: .8rem ;
@@ -137,7 +126,7 @@
                 }
                 .social {
                     a {
-                       
+
                         width:auto;
                         img {
                             margin: 20px;
@@ -148,6 +137,4 @@
             }
         }
     }
-       
 }
->>>>>>> a5082f16a3b2ac9c443d7fa4eb3466c0cbabb32a
