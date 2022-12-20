@@ -63,10 +63,7 @@ body > main {
   min-height: calc(100vh - 400px);
 }
 
-body {
-  background-color: var(--bg-1);
-}
-body #header-page1 {
+#header-page1 {
   width: 100%;
   background-color: var(--bg-1);
   background-image: url("../images/Group.png");
@@ -76,65 +73,66 @@ body #header-page1 {
   align-items: center;
   justify-content: center;
 }
-body #header-page1 a figure {
+#header-page1 a figure {
   flex-direction: column;
   align-items: center;
 }
-body #header-page1 a figure :first-child {
+#header-page1 a figure :first-child {
   width: 90px;
   height: auto;
 }
-body #header-page1 a figure :last-child {
+#header-page1 a figure :last-child {
   width: 215px;
   height: auto;
 }
-body .main-page1 {
+
+.main-page1 {
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100%;
   justify-content: center;
 }
-body .main-page1 .content {
+.main-page1 .content {
   height: 520px;
   width: auto;
   border-radius: 20px;
   overflow: hidden;
 }
-body .main-page1 .content input {
+.main-page1 .content input {
   display: none;
 }
-body .main-page1 .content .slides {
+.main-page1 .content .slides {
   display: flex;
   width: 500%;
   height: 100%;
 }
-body .main-page1 .content .slides .slide {
+.main-page1 .content .slides .slide {
   width: 25%;
   transition: 0.6s;
 }
-body .main-page1 .content .slides .slide img {
+.main-page1 .content .slides .slide img {
   width: 100%;
   height: 100%;
 }
-body .main-page1 .content .slides #slide1:checked ~ .s1 {
+.main-page1 .content .slides #slide1:checked ~ .s1 {
   margin-left: 0;
 }
-body .main-page1 .content .slides #slide2:checked ~ .s1 {
+.main-page1 .content .slides #slide2:checked ~ .s1 {
   margin-left: -25%;
 }
-body .main-page1 .content .slides #slide3:checked ~ .s1 {
+.main-page1 .content .slides #slide3:checked ~ .s1 {
   margin-left: -50%;
 }
-body .main-page1 .content .slides #slide4:checked ~ .s1 {
+.main-page1 .content .slides #slide4:checked ~ .s1 {
   margin-left: -75%;
 }
-body .main-page1 .content .navigation {
+.main-page1 .content .navigation {
   position: absolute;
   display: flex;
   color: white;
 }
-body .main-page1 .content .navigation .bar {
+.main-page1 .content .navigation .bar {
   width: 70px;
   height: 17px;
   border: 2px solid #fff;
@@ -143,7 +141,7 @@ body .main-page1 .content .navigation .bar {
   cursor: pointer;
   transition: 0.4s;
 }
-body .main-page1 .content .navigation .bar:hover {
+.main-page1 .content .navigation .bar:hover {
   background-color: #fff;
 }
 
